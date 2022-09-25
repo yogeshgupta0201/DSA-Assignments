@@ -1,12 +1,14 @@
 import java.util.Scanner;
 public class doubly_linked_list {
     static class Node{
-        String data;
+        String name;
+        int age;
         Node next;
         Node prev;
         // To initialize these values we have to create a construcutor
-        Node(String data){
-            this.data=data;
+        Node(String name, int age){
+            this.name=name;
+            this.age=age;
             this.next=null;
             this.prev=null;
         }
@@ -14,13 +16,16 @@ public class doubly_linked_list {
     Node head=null;
     Node tail=null;
     public void creation(){
-        String data;
+        String name;
+        int age;
         int n;
         try (Scanner sc = new Scanner(System.in)) {
             do{
-            System.out.println("Enter the names of your family members along with their age (FORMAT: FirstName_Age): ");
-            data=sc.next();
-            Node new_node=new Node(data);
+            System.out.println("Enter the names of your family members: ");
+            name=sc.next();
+            System.out.println("Enter the age of that family member: ");
+            age=sc.nextInt();
+            Node new_node=new Node(name, age);
             if (head==null){
                 head=new_node;
                 tail=new_node;
@@ -44,7 +49,7 @@ public class doubly_linked_list {
         }
         else{
             while(temp!=null){
-                System.out.print(temp.data+" ");
+                System.out.print(temp.name+" "+temp.age+" ");
                 temp=temp.next;
             }
         }
