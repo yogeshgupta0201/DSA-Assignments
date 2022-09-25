@@ -1,21 +1,31 @@
-Enter the names of your family members along with their age (FORMAT: FirstName_Age): 
-Premlata_75
+Enter the names of your family members: 
+Premlata
+Enter the age of that family member: 
+70
 Do you want to add more names. If yes press 1, else press any other number: 
 1
-Enter the names of your family members along with their age (FORMAT: FirstName_Age): 
-Anil_55
+Enter the names of your family members: 
+Anil
+Enter the age of that family member: 
+55
 Do you want to add more names. If yes press 1, else press any other number: 
 1
-Enter the names of your family members along with their age (FORMAT: FirstName_Age): 
-Shama_55
+Enter the names of your family members: 
+Shama
+Enter the age of that family member: 
+55
 Do you want to add more names. If yes press 1, else press any other number: 
 1
-Enter the names of your family members along with their age (FORMAT: FirstName_Age): 
-Brijesh_24
+Enter the names of your family members: 
+Brijesh
+Enter the age of that family member: 
+24
 Do you want to add more names. If yes press 1, else press any other number: 
 1
-Enter the names of your family members along with their age (FORMAT: FirstName_Age): 
-Yogesh_19
+Enter the names of your family members: 
+Yogesh
+Enter the age of that family member: 
+19
 Do you want to add more names. If yes press 1, else press any other number: 
 5
-Yogesh_19 Brijesh_24 Shama_55 Anil_55 Premlata_75 
+Yogesh 19 Brijesh 24 Shama 55 Anil 55 Premlata 70 
