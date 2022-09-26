@@ -1,0 +1,78 @@
+Unlike Singly Linked List in which we traverse all the elements until we get null value.
+In Circular Linked List we traverse the elements until we reach the first element again i.e head.
+The condition which we apply in Singly Linked List was that we traverse until our temp variable becomes null.
+But in the case of Circular Linked List the only difference is that we traverse until the temp variable is equal to head value.
+Once our temp becomes unequal to head value our condition becomes false and traversal is stopped.
+The following is the Java code for creation and traversal of basic circular linked list.
+
+import java.util.Scanner;
+public class circular_linked_list {
+    static class Node{
+        int data;
+        Node next;
+        Node(int data){
+            this.data=data;
+            this.next=null;
+        }
+    }
+    Node head=null;
+    Node tail=null;
+    public void creation(){
+        int data,n;
+        try (Scanner sc = new Scanner(System.in)) {
+            do{
+                System.out.println("Enter Data: ");
+                data=sc.nextInt();
+                Node new_node=new Node(data);
+                if (head==null){
+                    head=new_node;
+                    tail=new_node;
+                    new_node.next=head;
+                }
+                else{
+                    new_node.next=head;
+                    head=new_node;
+                    tail.next=head;
+                }
+                System.out.println("Do You want to add more items. If yes press 1, else press any other number: ");
+                n=sc.nextInt();
+            }
+            while(n==1);
+        }
+    }
+    public void traverser(){
+        Node temp=head;
+        if (head==null){
+            System.out.println("LL does not exist.");
+        }
+        else{
+            do{
+                System.out.print(temp.data+" ");
+                temp=temp.next;
+            }
+            while(temp!=head);
+        }
+    }
+    public static void main(String[] args) {
+        circular_linked_list cll=new circular_linked_list();
+        cll.creation();
+        cll.traverser();
+    }
+}
+****************************************************
+****************************************************
+
+The condition on which we are focussing is 48-55 line of the above code i.e
+    public void traverser(){
+        Node temp=head;
+        if (head==null){
+            System.out.println("LL does not exist.");
+        }
+        else{
+            do{
+                System.out.print(temp.data+" ");
+                temp=temp.next;
+            }
+            while(temp!=head);
+        }
+    }
